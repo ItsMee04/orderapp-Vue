@@ -1,4 +1,5 @@
 <template lang="">
+  <NavBar :name=userName />
   <div class="page-wrapper">
     <div class="content">
       <div class="row">
@@ -120,8 +121,12 @@
 </template>
 <script>
 import router from "@/router";
+import NavBar from "@/components/NavBar.vue";
 
 export default {
+  components: {
+    NavBar
+  },
   data() {
     return {
       userName: "",
